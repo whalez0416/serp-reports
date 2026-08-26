@@ -1,123 +1,245 @@
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>시안 D — 트렌디 모던 (Pretendard)</title>
+<title>리포트 디자인 시안 — 트렌디 3안</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
-:root{--bg:#fafbfc;--card:#ffffff;--ink:#0f1222;--sub:#737a8c;--line:#eceef2;
- --accent:#2f6bff;--accent-bg:#eef3ff;--own:#05a56d;--own-bg:#e6f7f0;--warn:#ef4444;--warn-bg:#feecec;
- --mid:#b45309;--mid-bg:#fdf1e3;}
 body{font-family:'Pretendard Variable',Pretendard,-apple-system,'Malgun Gothic',sans-serif;
- background:var(--bg);color:var(--ink);font-size:15.5px;line-height:1.65;
- letter-spacing:-.01em;font-feature-settings:'tnum';}
-.wrap{max-width:920px;margin:0 auto;padding:56px 24px 90px;}
-.notice{background:var(--accent-bg);color:var(--accent);border-radius:12px;padding:12px 18px;
- font-size:13.5px;font-weight:600;margin-bottom:40px;}
-
-.eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:var(--accent);
- background:var(--accent-bg);border-radius:99px;padding:6px 14px;margin-bottom:18px;}
-.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);}
-h1{font-size:42px;font-weight:800;letter-spacing:-.035em;line-height:1.2;margin-bottom:14px;}
-.meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:44px;}
-.meta span{font-size:13px;font-weight:600;color:var(--sub);background:var(--card);
- border:1px solid var(--line);border-radius:99px;padding:5px 13px;}
-
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;
- padding:28px 30px;margin-bottom:18px;box-shadow:0 1px 2px rgba(15,18,34,.03);}
-h2{font-size:19px;font-weight:800;letter-spacing:-.02em;margin-bottom:2px;}
-.desc{font-size:13px;color:var(--sub);margin-bottom:16px;}
-
-.ob{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);}
-.ob:last-child{border-bottom:none;padding-bottom:0;}
-.ob .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
- font-size:12px;font-weight:800;letter-spacing:0;}
-.ob .ic.nv{background:var(--own-bg);color:var(--own);}
-.ob .ic.gg{background:var(--accent-bg);color:var(--accent);}
-.ob b{font-weight:700;}
-.ap{color:var(--accent);font-weight:700;font-size:13.5px;margin-top:4px;}
+ background:#e8eaed;color:#222;line-height:1.65;letter-spacing:-.01em;font-feature-settings:'tnum';}
+.intro{max-width:960px;margin:0 auto;padding:52px 24px 4px;}
+.intro h1{font-size:27px;font-weight:800;letter-spacing:-.03em;margin-bottom:8px;}
+.intro p{font-size:14.5px;color:#666;}
+.frame{max-width:960px;margin:36px auto 0;padding:0 24px;}
+.frame:last-child{padding-bottom:80px;}
+.tagrow{display:flex;align-items:baseline;gap:12px;margin-bottom:4px;}
+.tagrow .id{font-size:21px;font-weight:800;letter-spacing:-.02em;}
+.tagrow .nm{font-size:15px;color:#555;font-weight:700;}
+.feat{font-size:13.5px;color:#777;margin-bottom:14px;}
+.mock{border-radius:14px;overflow:hidden;box-shadow:0 10px 34px rgba(0,0,0,.12);}
+.m-in{padding:44px 46px;}
+@media(max-width:640px){.m-in{padding:26px 18px;}}
 
 table{width:100%;border-collapse:collapse;font-size:14.5px;}
-th{text-align:left;font-size:12px;color:var(--sub);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line);}
-td{padding:12px 10px;border-bottom:1px solid var(--line);}
-tr:last-child td{border-bottom:none;}
-.st{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13.5px;border-radius:8px;padding:4px 11px;}
-.st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;}
-.st.g{background:var(--own-bg);color:var(--own);}
-.st.b{background:var(--warn-bg);color:var(--warn);}
-.st.m{background:var(--mid-bg);color:var(--mid);}
+th{text-align:left;font-size:12px;font-weight:600;padding:8px 10px;}
+td{padding:12px 10px;}
 
-.kwt{font-size:22px;font-weight:800;letter-spacing:-.025em;}
-.eng{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--sub);
- background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:3px 9px;margin:8px 0 14px;}
-.banner{display:flex;align-items:center;justify-content:space-between;background:var(--own-bg);
- border-radius:14px;padding:15px 20px;font-size:16.5px;font-weight:800;color:var(--own);margin-bottom:18px;}
-.banner span{font-size:13.5px;background:#fff;border-radius:99px;padding:4px 14px;}
-.comp{color:var(--warn);font-weight:700;}
-.sov{height:8px;border-radius:99px;overflow:hidden;display:flex;background:var(--line);margin-top:14px;}
-.sov i{display:block;height:100%;}
-.sovlbl{display:flex;gap:18px;font-size:12.5px;font-weight:600;color:var(--sub);margin-top:8px;}
-.sovlbl b{color:var(--ink);}
+/* ═══════ 1안 — 클린 블루 ═══════ */
+.p1{background:#fafbfc;color:#0f1222;}
+.p1 .eyebrow{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;color:#2f6bff;
+ background:#eef3ff;border-radius:99px;padding:6px 14px;margin-bottom:16px;}
+.p1 .eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:#2f6bff;}
+.p1 h1{font-size:38px;font-weight:800;letter-spacing:-.035em;line-height:1.2;margin-bottom:12px;}
+.p1 .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:34px;}
+.p1 .meta span{font-size:12.5px;font-weight:600;color:#737a8c;background:#fff;border:1px solid #eceef2;border-radius:99px;padding:5px 13px;}
+.p1 .card{background:#fff;border:1px solid #eceef2;border-radius:18px;padding:26px 28px;margin-bottom:16px;box-shadow:0 1px 2px rgba(15,18,34,.03);}
+.p1 h2{font-size:18px;font-weight:800;letter-spacing:-.02em;margin-bottom:2px;}
+.p1 .desc{font-size:13px;color:#737a8c;margin-bottom:14px;}
+.p1 .ob{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid #eceef2;}
+.p1 .ob:last-child{border-bottom:none;padding-bottom:0;}
+.p1 .ic{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;}
+.p1 .ic.nv{background:#e6f7f0;color:#05a56d;} .p1 .ic.gg{background:#eef3ff;color:#2f6bff;}
+.p1 .ap{color:#2f6bff;font-weight:700;font-size:13.5px;margin-top:3px;}
+.p1 th{color:#737a8c;border-bottom:1px solid #eceef2;}
+.p1 td{border-bottom:1px solid #eceef2;} .p1 tr:last-child td{border-bottom:none;}
+.p1 .st{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:13px;border-radius:8px;padding:4px 11px;}
+.p1 .st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;}
+.p1 .st.g{background:#e6f7f0;color:#05a56d;} .p1 .st.b{background:#feecec;color:#ef4444;} .p1 .st.m{background:#fdf1e3;color:#b45309;}
+.p1 .kwt{font-size:21px;font-weight:800;letter-spacing:-.025em;}
+.p1 .eng{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.08em;color:#737a8c;background:#fafbfc;border:1px solid #eceef2;border-radius:6px;padding:3px 9px;margin:7px 0 13px;}
+.p1 .banner{display:flex;align-items:center;justify-content:space-between;background:#e6f7f0;border-radius:13px;padding:14px 19px;font-size:16px;font-weight:800;color:#05a56d;margin-bottom:16px;}
+.p1 .banner span{font-size:13px;background:#fff;border-radius:99px;padding:4px 13px;}
+.p1 .comp{color:#ef4444;font-weight:700;}
+.p1 .sov{height:8px;border-radius:99px;overflow:hidden;display:flex;background:#eceef2;margin-top:13px;}
+.p1 .sov i{display:block;height:100%;}
+.p1 .sovlbl{display:flex;gap:18px;font-size:12.5px;font-weight:600;color:#737a8c;margin-top:7px;}
 
-.dark{background:var(--ink);color:#fff;border:none;}
-.dark h2{color:#fff;}
-.dark .desc{color:#9aa1b4;}
-.dark .headline{font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.6;}
-.dark .badges{display:flex;gap:8px;margin-top:16px;}
-.dark .bd{font-size:12.5px;font-weight:700;border-radius:99px;padding:5px 13px;background:rgba(255,255,255,.1);}
-.dark .bd.r{background:rgba(239,68,68,.22);color:#ff9d9d;}
-.dark .bd.y{background:rgba(245,158,11,.2);color:#ffd28a;}
-.dark .bd.g{background:rgba(5,165,109,.22);color:#6fe0b3;}
-@media(max-width:640px){.wrap{padding:32px 16px 60px;}h1{font-size:31px;}.card{padding:20px;}}
-</style></head><body><div class="wrap">
+/* ═══════ 2안 — 다크 히어로 ═══════ */
+.p2{background:#f4f5f7;color:#101319;}
+.p2 .hero{background:#101319;color:#fff;border-radius:20px;padding:30px 32px;margin-bottom:16px;}
+.p2 .hero .eyebrow{font-size:12.5px;font-weight:700;color:#8ab4ff;margin-bottom:10px;}
+.p2 .hero h1{font-size:33px;font-weight:800;letter-spacing:-.03em;line-height:1.25;margin-bottom:8px;}
+.p2 .hero .meta{font-size:13px;color:#9aa1b4;margin-bottom:20px;}
+.p2 .hero .headline{font-size:17.5px;font-weight:700;letter-spacing:-.015em;line-height:1.6;
+ border-top:1px solid rgba(255,255,255,.12);padding-top:18px;}
+.p2 .hero .badges{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.p2 .bd{font-size:12.5px;font-weight:700;border-radius:99px;padding:5px 13px;background:rgba(255,255,255,.1);}
+.p2 .bd.r{background:rgba(239,68,68,.24);color:#ff9d9d;} .p2 .bd.y{background:rgba(245,158,11,.2);color:#ffd28a;}
+.p2 .bd.g{background:rgba(5,165,109,.24);color:#6fe0b3;}
+.p2 .card{background:#fff;border-radius:20px;padding:26px 28px;margin-bottom:16px;}
+.p2 h2{font-size:18px;font-weight:800;letter-spacing:-.02em;margin-bottom:2px;}
+.p2 .desc{font-size:13px;color:#79808f;margin-bottom:14px;}
+.p2 .ob{padding:12px 0;border-bottom:1px solid #f0f1f4;}
+.p2 .ob:last-child{border-bottom:none;padding-bottom:0;}
+.p2 .src{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.06em;border-radius:6px;padding:2px 9px;margin-right:8px;vertical-align:1px;}
+.p2 .src.nv{background:#e6f7f0;color:#05a56d;} .p2 .src.gg{background:#e9efff;color:#3b63f2;}
+.p2 .ap{color:#3b63f2;font-weight:700;font-size:13.5px;margin-top:3px;}
+.p2 th{color:#79808f;border-bottom:1px solid #f0f1f4;}
+.p2 td{border-bottom:1px solid #f0f1f4;} .p2 tr:last-child td{border-bottom:none;}
+.p2 .st{font-weight:800;font-size:14px;}
+.p2 .st.g{color:#059468;} .p2 .st.b{color:#e03131;} .p2 .st.m{color:#b45309;}
+.p2 .kwt{font-size:21px;font-weight:800;letter-spacing:-.025em;}
+.p2 .eng{color:#79808f;font-size:11px;font-weight:800;letter-spacing:.08em;margin-left:8px;}
+.p2 .banner{background:#101319;color:#fff;border-radius:14px;padding:14px 19px;font-size:15.5px;font-weight:700;margin:12px 0 16px;display:flex;justify-content:space-between;align-items:center;}
+.p2 .banner span{background:#05a56d;border-radius:99px;padding:4px 13px;font-size:13px;font-weight:800;}
+.p2 .comp{color:#e03131;font-weight:700;}
+.p2 .sov{height:26px;border-radius:9px;overflow:hidden;display:flex;font-size:12px;font-weight:700;color:#fff;margin-top:13px;}
+.p2 .sov div{display:flex;align-items:center;justify-content:center;}
 
-<div class="notice">시안 D — 트렌디 모던 · 폰트를 Pretendard로 교체한 버전입니다. 이전 3안과 글자부터 다르게 느껴지는지 봐주세요.</div>
+/* ═══════ 3안 — 모노크롬 블랙 ═══════ */
+.p3{background:#fff;color:#111;}
+.p3 .head{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px;
+ padding-bottom:22px;border-bottom:1px solid #e5e5e5;margin-bottom:26px;}
+.p3 .eyebrow{font-size:12px;font-weight:600;color:#888;margin-bottom:8px;}
+.p3 h1{font-size:32px;font-weight:800;letter-spacing:-.035em;line-height:1.2;}
+.p3 .datechip{background:#111;color:#fff;font-size:12.5px;font-weight:700;border-radius:8px;padding:7px 14px;}
+.p3 .meta{font-size:13px;color:#888;margin-top:6px;}
+.p3 section{border:1px solid #e5e5e5;border-radius:12px;padding:24px 26px;margin-bottom:14px;}
+.p3 h2{font-size:16.5px;font-weight:800;letter-spacing:-.02em;margin-bottom:2px;}
+.p3 .desc{font-size:12.5px;color:#888;margin-bottom:14px;}
+.p3 .ob{padding:12px 0;border-top:1px solid #f0f0f0;}
+.p3 .ob b{font-weight:700;}
+.p3 .src{font-weight:800;font-size:12px;margin-right:6px;}
+.p3 .ap{font-size:13.5px;font-weight:700;margin-top:3px;color:#111;}
+.p3 .ap::before{content:"→ ";color:#888;}
+.p3 th{color:#888;border-bottom:1px solid #111;}
+.p3 td{border-bottom:1px solid #f0f0f0;} .p3 tr:last-child td{border-bottom:none;}
+.p3 .st{display:inline-block;font-weight:700;font-size:12.5px;border-radius:99px;padding:3px 12px;border:1px solid #e5e5e5;}
+.p3 .st.g{border-color:#0ca678;color:#087f5b;} .p3 .st.b{border-color:#fa5252;color:#e03131;}
+.p3 .st.m{border-color:#e6a23c;color:#b8860b;}
+.p3 .kwt{font-size:20px;font-weight:800;letter-spacing:-.025em;}
+.p3 .eng{font-size:11px;font-weight:800;letter-spacing:.08em;color:#888;margin-left:8px;}
+.p3 .banner{border:1.5px solid #111;border-radius:10px;padding:13px 18px;font-size:15.5px;font-weight:800;margin:12px 0 16px;display:flex;justify-content:space-between;}
+.p3 .banner .ok{color:#087f5b;}
+.p3 .comp{color:#e03131;font-weight:700;}
+.p3 .sov{height:8px;border-radius:99px;overflow:hidden;display:flex;background:#f0f0f0;margin-top:13px;}
+.p3 .sov i{display:block;height:100%;}
+.p3 .sovlbl{display:flex;gap:18px;font-size:12.5px;font-weight:600;color:#888;margin-top:7px;}
+</style></head><body>
 
-<div class="eyebrow">검색 노출 모니터링</div>
-<h1>민병원 모니터링 리포트</h1>
-<div class="meta"><span>2026-08-26</span><span>검색어 8개</span><span>네이버 · 구글</span><span>회차 7건 누적</span></div>
-
-<div class="card dark">
-  <h2>오늘 핵심</h2>
-  <div class="desc">신호 30건 중 우선순위 요약</div>
-  <div class="headline">담낭수술 — 네이버 1위인데 구글에서는 미노출. 한쪽 채널에만 노출이 쏠려 있어 알고리즘 변동에 취약합니다.</div>
-  <div class="badges"><span class="bd r">위험 14</span><span class="bd y">관찰 11</span><span class="bd g">양호 1</span><span class="bd">참고 2</span></div>
+<div class="intro">
+  <h1>리포트 디자인 시안 — 트렌디 3안</h1>
+  <p>세 안 모두 Pretendard + 자간 축소 + 굵은 타이포 기반입니다. 마음에 드는 안을 알려주시면
+  그때 리포트 전체에 적용해 게시합니다 (통과 전에는 리포트 URL을 바꾸지 않습니다).</p>
 </div>
 
-<div class="card">
-  <h2>알고리즘 관찰</h2>
-  <div class="desc">수집 데이터에서 드러난 노출 규칙 — 회차가 쌓일수록 정확해집니다</div>
-  <div class="ob"><div class="ic nv">NAVER</div><div>
-    광고 제외 첫 영역: <b>AI브리핑 4곳 · 브랜드콘텐츠 2곳</b>. 최상단이 AI 답변으로 채워지는 중.
-    <div class="ap">→ AI브리핑에 인용되는 원본(블로그·카페) 글이 있어야 첫 화면에 걸립니다</div>
+<!-- ═══════════ 1안 ═══════════ -->
+<div class="frame">
+  <div class="tagrow"><span class="id">1안</span><span class="nm">클린 블루</span></div>
+  <div class="feat">전체 라이트. 화이트 카드 + 블루 액센트 1개, 상태는 점+틴트 배지. 밝고 산뜻한 SaaS 대시보드 느낌.</div>
+  <div class="mock"><div class="p1 m-in">
+    <div class="eyebrow">검색 노출 모니터링</div>
+    <h1>민병원 모니터링 리포트</h1>
+    <div class="meta"><span>2026-08-26</span><span>검색어 8개</span><span>네이버 · 구글</span><span>회차 7건</span></div>
+    <div class="card">
+      <h2>알고리즘 관찰</h2><div class="desc">수집 데이터에서 드러난 노출 규칙</div>
+      <div class="ob"><div class="ic nv">NAVER</div><div>광고 제외 첫 영역: <b>AI브리핑 4곳 · 브랜드콘텐츠 2곳</b>. 최상단이 AI 답변으로 채워지는 중.
+        <div class="ap">→ AI브리핑에 인용되는 원본(블로그·카페) 글이 있어야 첫 화면에 걸립니다</div></div></div>
+      <div class="ob"><div class="ic gg">GOOGLE</div><div>오가닉 상위 도메인 1위 <b>minhospital.co.kr(8건)</b>. AI개요가 7/8 키워드에서 첫 화면 차지.
+        <div class="ap">→ 인용되는 도메인 유형에 질문형 정보성 글을 올려야 인용됩니다</div></div></div>
+    </div>
+    <div class="card">
+      <h2>결과 요약</h2><div class="desc">전체 16개 결과 — 좋음 5 · 보통 4 · 주의 7</div>
+      <table>
+        <tr><th>검색어</th><th>엔진</th><th>평가</th><th>요약</th></tr>
+        <tr><td><b>담낭수술</b></td><td>네이버</td><td><span class="st g">좋음</span></td><td>블로그·카페 1위 — 상위 노출 양호</td></tr>
+        <tr><td><b>담낭수술</b></td><td>구글</td><td><span class="st b">주의</span></td><td>미노출 — 노출 시급</td></tr>
+        <tr><td><b>탈장수술</b></td><td>네이버</td><td><span class="st m">보통</span></td><td>웹문서 5위 — 상위권 아님</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <div class="kwt">담낭수술</div><div class="eng">NAVER</div>
+      <div class="banner">우리 병원 노출 <span>블로그·카페 1위</span></div>
+      <table>
+        <tr><th>경쟁 병원</th><th>영역</th><th>순위</th></tr>
+        <tr><td class="comp">기쁨병원</td><td>블로그·카페</td><td>3위</td></tr>
+        <tr><td class="comp">담소유병원</td><td>지식iN</td><td>2위</td></tr>
+      </table>
+      <div class="sov"><i style="width:30%;background:#05a56d"></i><i style="width:20%;background:#ef4444"></i></div>
+      <div class="sovlbl"><span>자사 30%</span><span>경쟁 20%</span><span>기타 50%</span></div>
+    </div>
   </div></div>
-  <div class="ob"><div class="ic gg">GOOGLE</div><div>
-    오가닉 상위 도메인 1위 <b>minhospital.co.kr(8건)</b>. AI개요가 7/8 키워드에서 첫 화면 차지.
-    <div class="ap">→ 인용되는 도메인 유형에 질문형 정보성 글을 올려야 인용됩니다</div>
+</div>
+
+<!-- ═══════════ 2안 ═══════════ -->
+<div class="frame">
+  <div class="tagrow"><span class="id">2안</span><span class="nm">다크 히어로</span></div>
+  <div class="feat">상단 "오늘 핵심"만 블랙 카드로 강하게, 본문은 라이트. 대비가 커서 보고서 첫인상이 가장 임팩트 있는 안.</div>
+  <div class="mock"><div class="p2 m-in">
+    <div class="hero">
+      <div class="eyebrow">검색 노출 모니터링 · 2026-08-26 · 회차 7건</div>
+      <h1>민병원 모니터링 리포트</h1>
+      <div class="meta">검색어 8개 · 네이버·구글 경쟁 가시성</div>
+      <div class="headline">담낭수술 — 네이버 1위인데 구글에서는 미노출. 한쪽 채널에만 노출이 쏠려 있어 알고리즘 변동에 취약합니다.</div>
+      <div class="badges"><span class="bd r">위험 14</span><span class="bd y">관찰 11</span><span class="bd g">양호 1</span><span class="bd">참고 2</span></div>
+    </div>
+    <div class="card">
+      <h2>알고리즘 관찰</h2><div class="desc">수집 데이터에서 드러난 노출 규칙</div>
+      <div class="ob"><span class="src nv">NAVER</span>광고 제외 첫 영역: <b>AI브리핑 4곳 · 브랜드콘텐츠 2곳</b>. 최상단이 AI 답변으로 채워지는 중.
+        <div class="ap">→ AI브리핑에 인용되는 원본(블로그·카페) 글이 있어야 첫 화면에 걸립니다</div></div>
+      <div class="ob"><span class="src gg">GOOGLE</span>오가닉 상위 도메인 1위 <b>minhospital.co.kr(8건)</b>. AI개요가 7/8 키워드에서 첫 화면 차지.
+        <div class="ap">→ 인용되는 도메인 유형에 질문형 정보성 글을 올려야 인용됩니다</div></div>
+    </div>
+    <div class="card">
+      <h2>결과 요약</h2><div class="desc">전체 16개 결과 — 좋음 5 · 보통 4 · 주의 7</div>
+      <table>
+        <tr><th>검색어</th><th>엔진</th><th>평가</th><th>요약</th></tr>
+        <tr><td><b>담낭수술</b></td><td>네이버</td><td class="st g">좋음</td><td>블로그·카페 1위 — 상위 노출 양호</td></tr>
+        <tr><td><b>담낭수술</b></td><td>구글</td><td class="st b">주의</td><td>미노출 — 노출 시급</td></tr>
+        <tr><td><b>탈장수술</b></td><td>네이버</td><td class="st m">보통</td><td>웹문서 5위 — 상위권 아님</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <span class="kwt">담낭수술</span><span class="eng">NAVER</span>
+      <div class="banner">우리 병원 노출 <span>블로그·카페 1위</span></div>
+      <table>
+        <tr><th>경쟁 병원</th><th>영역</th><th>순위</th></tr>
+        <tr><td class="comp">기쁨병원</td><td>블로그·카페</td><td>3위</td></tr>
+        <tr><td class="comp">담소유병원</td><td>지식iN</td><td>2위</td></tr>
+      </table>
+      <div class="sov"><div style="width:30%;background:#05a56d">자사 30%</div><div style="width:20%;background:#e03131">경쟁 20%</div><div style="width:50%;background:#d7dae0;color:#555">기타 50%</div></div>
+    </div>
   </div></div>
 </div>
 
-<div class="card">
-  <h2>결과 요약</h2>
-  <div class="desc">전체 16개 결과 — 좋음 5 · 보통 4 · 주의 7</div>
-  <table>
-    <tr><th>검색어</th><th>엔진</th><th>평가</th><th>요약</th></tr>
-    <tr><td><b>담낭수술</b></td><td>네이버</td><td><span class="st g">좋음</span></td><td>블로그·카페 1위 — 상위 노출 양호</td></tr>
-    <tr><td><b>담낭수술</b></td><td>구글</td><td><span class="st b">주의</span></td><td>미노출 — 노출 시급</td></tr>
-    <tr><td><b>탈장수술</b></td><td>네이버</td><td><span class="st m">보통</span></td><td>웹문서 5위 — 상위권 아님</td></tr>
-  </table>
+<!-- ═══════════ 3안 ═══════════ -->
+<div class="frame">
+  <div class="tagrow"><span class="id">3안</span><span class="nm">모노크롬 블랙</span></div>
+  <div class="feat">순백 + 흑백 + 얇은 보더 (Vercel·Linear 계열). 색은 상태 표시에만 아껴 쓰고, 배지는 아웃라인. 가장 절제되고 세련된 안.</div>
+  <div class="mock"><div class="p3 m-in">
+    <div class="head">
+      <div><div class="eyebrow">검색 노출 모니터링</div>
+        <h1>민병원 모니터링 리포트</h1>
+        <div class="meta">검색어 8개 · 네이버·구글 · 회차 7건 누적</div></div>
+      <div class="datechip">2026-08-26</div>
+    </div>
+    <section>
+      <h2>알고리즘 관찰</h2><div class="desc">수집 데이터에서 드러난 노출 규칙</div>
+      <div class="ob"><span class="src">NAVER —</span>광고 제외 첫 영역: <b>AI브리핑 4곳 · 브랜드콘텐츠 2곳</b>. 최상단이 AI 답변으로 채워지는 중.
+        <div class="ap">AI브리핑에 인용되는 원본(블로그·카페) 글이 있어야 첫 화면에 걸립니다</div></div>
+      <div class="ob"><span class="src">GOOGLE —</span>오가닉 상위 도메인 1위 <b>minhospital.co.kr(8건)</b>. AI개요가 7/8 키워드에서 첫 화면 차지.
+        <div class="ap">인용되는 도메인 유형에 질문형 정보성 글을 올려야 인용됩니다</div></div>
+    </section>
+    <section>
+      <h2>결과 요약</h2><div class="desc">전체 16개 결과 — 좋음 5 · 보통 4 · 주의 7</div>
+      <table>
+        <tr><th>검색어</th><th>엔진</th><th>평가</th><th>요약</th></tr>
+        <tr><td><b>담낭수술</b></td><td>네이버</td><td><span class="st g">좋음</span></td><td>블로그·카페 1위 — 상위 노출 양호</td></tr>
+        <tr><td><b>담낭수술</b></td><td>구글</td><td><span class="st b">주의</span></td><td>미노출 — 노출 시급</td></tr>
+        <tr><td><b>탈장수술</b></td><td>네이버</td><td><span class="st m">보통</span></td><td>웹문서 5위 — 상위권 아님</td></tr>
+      </table>
+    </section>
+    <section>
+      <span class="kwt">담낭수술</span><span class="eng">NAVER</span>
+      <div class="banner"><span class="ok">우리 병원 노출</span><span>블로그·카페 1위</span></div>
+      <table>
+        <tr><th>경쟁 병원</th><th>영역</th><th>순위</th></tr>
+        <tr><td class="comp">기쁨병원</td><td>블로그·카페</td><td>3위</td></tr>
+        <tr><td class="comp">담소유병원</td><td>지식iN</td><td>2위</td></tr>
+      </table>
+      <div class="sov"><i style="width:30%;background:#0ca678"></i><i style="width:20%;background:#fa5252"></i></div>
+      <div class="sovlbl"><span>자사 30%</span><span>경쟁 20%</span><span>기타 50%</span></div>
+    </section>
+  </div></div>
 </div>
 
-<div class="card">
-  <div class="kwt">담낭수술</div>
-  <div class="eng">NAVER</div>
-  <div class="banner">우리 병원 노출 <span>블로그·카페 1위</span></div>
-  <table>
-    <tr><th>경쟁 병원</th><th>영역</th><th>순위</th></tr>
-    <tr><td class="comp">기쁨병원</td><td>블로그·카페</td><td>3위</td></tr>
-    <tr><td class="comp">담소유병원</td><td>지식iN</td><td>2위</td></tr>
-  </table>
-  <div class="sov"><i style="width:30%;background:var(--own)"></i><i style="width:20%;background:var(--warn)"></i></div>
-  <div class="sovlbl"><span><b>자사</b> 30%</span><span><b>경쟁</b> 20%</span><span><b>기타</b> 50%</span></div>
-</div>
-
-</div></body></html>
+</body></html>
